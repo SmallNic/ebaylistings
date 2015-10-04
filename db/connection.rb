@@ -6,7 +6,7 @@ require 'active_record'
 
 ActiveRecord::Base.establish_connection(
   :adapter => "postgresql",
-  :database => "d7locl69rpc2hv"
+  :database => "ebaylistings"
 )
 
 if defined?(Sinatra)

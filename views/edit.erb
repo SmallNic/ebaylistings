@@ -1,0 +1,81 @@
+<div class="container-fluid">
+
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12 centered">
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3>Book</h3>
+          </div>
+
+          <div class="panel-body">
+            <table class="table-bordered table-hover table-responsive centered" id="edit-table">
+              <form method="post" action="/items/<%= @item.id %>">
+                <input type="hidden" name="_method" value="put">
+                <tr>
+                  <td>Title</td>
+                  <td><textarea class="form-control" id="title" name="item[title]" placeholder="Title"><%= @item.title %></textarea></td>
+                </tr>
+                <tr>
+                  <td>Author</td>
+                  <td><textarea class="form-control" id="author" name="item[author]" placeholder="Author"><%= @item.author %></textarea></td>
+                </tr>
+                <tr>
+                  <td>ISBN</td>
+                  <td><input type="text" class="form-control" id="isbn" name="item[isbn]" placeholder="ISBN" value="<%= @item.isbn %>"></td>
+                </tr>
+                <tr>
+                  <td>Condition</td>
+                  <td><input type="text" class="form-control" id="condition" name="item[condition]" placeholder="Condition" value="<%= @item.condition %>"></td>
+                </tr>
+                <tr>
+                  <td>Specifics</td>
+                  <td><textarea class="form-control" id="specifics" name="item[specifics]" placeholder="Specifics"><%= @item.specifics %></textarea></td>
+                </tr>
+                <tr>
+                  <td>Edition</td>
+                  <td><input type="text" class="form-control" id="edition" name="item[edition]" placeholder="Edition" value="<%= @item.edition %>"></td>
+                </tr>
+                <tr>
+                  <td>Year</td>
+                  <td><input type="text" class="form-control" id="year" name="item[year]" placeholder="Year" value="<%= @item.year %>"></td>
+                </tr>
+                <tr>
+                  <td>Type</td>
+                  <td><input list="book-type" class="form-control" id="type" name="item[cover]" value="<%= @item.cover %>"></td>
+                    <datalist id="book-type">
+                      <option value="Hardcover">
+                      <option value="Paperback">
+                    </datalist>
+                </tr>
+                <tr>
+                  <td>Weight</td>
+                  <td><input type="number" step="any" class="form-control" id="weight" name="item[weight]" placeholder="Weight" value="<%= @item.weight %>"></td>
+                </tr>
+                <tr>
+                  <td>Envelope</td>
+                  <td><input type="number" step="any" class="form-control" id="envelope" name="item[env]" placeholder="Envelope" value="<%= @item.env %>"></td>
+                </tr>
+                <tr>
+                  <td>Paper</td>
+                  <td><input type="number" step="any" class="form-control" id="paper" name="item[paper]" placeholder="Paper" value="<%= @item.paper %>"></td>
+                </tr>
+                <tr>
+                  <td>Total</td>
+                  <td><input type="number" step="any" class="form-control" id="total" name="item[total]" placeholder="Total" readonly="true"></td>
+                </tr>
+                <input type="submit" class="btn btn-info btn-sm pull-right edit-book-button" value="Edit Book">
+              </form>
+            </table>
+          </div><!-- End .Panel-body -->
+        </div><!-- End .Panel -->
+
+      </div><!-- End .Col -->
+    </div><!-- End .Row -->
+
+
+
+
+
+
+</div><!-- End .Container-Fluid -->

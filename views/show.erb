@@ -1,0 +1,74 @@
+<div class="container-fluid">
+
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12 centered">
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3>Book</h3>
+            <a href="/items/<%= @item.id %>/edit" class="btn btn-info btn-sm">Edit</a>
+            <form action="/items/<%= @item.id %>" method="post" id="delete-button">
+              <input type="hidden" name="_method" value="delete">
+              <input class="btn btn-info btn-sm" type="submit" value="Delete!">
+            </form>
+            <button id="view-button" class="btn btn-info btn-sm">View</button>
+          </div>
+
+          <div class="panel-body" id="item-contents">
+
+            <textarea id="item-details" >
+
+
+              <html>
+                  <head><link href='http://fonts.googleapis.com/css?family=Dosis:400,600' rel='stylesheet' type='text/css'></head>
+              <body>
+              <!-- nested table generated at www.isdntek.com/tagbot/borders.htm -->
+              <table name="BodyBackground" width="100%" align="center" cellspacing="0" cellpadding="14" border="0" bgcolor="#FFFFFF" background="http://www.isdntek.com/tagbot/backgrounds/xscreen_black.gif"><tr ><td >
+              <table width="100%" align="center" cellspacing="0" cellpadding="7" border="1" bgcolor="#F70844" ><tr><td bgcolor="#DF2050" background="http://www.isdntek.com/tagbot/backgrounds/texture_bluegreen.gif">
+              <table width="100%" align="center" cellspacing="0" cellpadding="20" border="1" bgcolor="#FFFFFF" ><tr><td bgcolor="white">
+
+              <center>
+                <h1 style="font-family: sans-serif; color:black; font-size:2.5em;"><%= @item.title %></h1>
+                <h2 style="font-family: sans-serif; color:black;">Written by <%= @item.author %></h2>
+                <br>
+                <% if @item.edition.length > 0 %>
+                  <h2 style="font-family: sans-serif; color:black">--- <%= @item.year %>, <%= @item.cover %>, <%= @item.edition %> Edition ---</h2>
+                <% else %>
+                  <h2 style="font-family: sans-serif; color:black">--- <%= @item.year %>, <%= @item.cover %> ---</h2>
+                <% end %>
+                <h3 style="background:lightgrey; border: solid blue; border-radius:25px; padding:5px; width:55%; color:black; font-family:serif;"><%= @item.condition %> condition. <%= @item.specifics %></h3>
+              </center>
+
+              <div style="font-family: sans-serif; font-size:1.15em; color:black;">
+                  <p style="color:black; font-size:1.4em;"><strong>Product Description</strong></p>
+                  <p style="margin-left:1.5em;"> FILL ME IN <em> (Source: Amazon.com)</em></p>
+              </div>
+              <p>&nbsp;</p>
+              <p style="color:red; text-align:center; font-size:1.4em;"><em>Will combine shipping for multiple books.</em></p>
+
+              <hr style="width:90%;">
+
+              <p style="text-align:right; font-family: 'Dosis', sans-serif; font-size: 24px; font-weight:600; text-shadow: 2px 2px 4px #839096; color:black;">EricMinty</p>
+
+              </td></tr></table>
+              </td></tr></table>
+              </td></tr></table>
+              <div align=center style="font-family:sans-serif; font-size:10; color:gray;">Easy Free Borders from <A href=http://www.isdntek.com/tagbot/borders.htm><font color=#606060>TagBot Borders</font></a></div>
+               <!-- nested table generated at www.isdntek.com/tagbot/borders.htm -->
+              </body>
+              </html>
+
+            </textarea>
+
+          </div><!-- End .Panel-body -->
+        </div><!-- End .Panel -->
+
+      </div><!-- End .Col -->
+    </div><!-- End .Row -->
+
+
+
+
+
+
+</div><!-- End .Container-Fluid -->

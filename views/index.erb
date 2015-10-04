@@ -1,0 +1,76 @@
+<div class="container-fluid">
+
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12 centered">
+
+        <form method="post" action="/items">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3>Books</h3>
+            <input type="submit" class="btn btn-info btn-sm pull-right new-book-button" value="Add New Book">
+          </div>
+
+          <div class="panel-body table-responsive" >
+            <table class="table-bordered table-hover centered">
+              <tr>
+                <th> Title </th>
+                <th> Author </th>
+                <th> ISBN </th>
+                <th> Condition </th>
+                <th> Specifics </th>
+                <th> Edition </th>
+                <th> Year </th>
+                <th> Type </th>
+                <th> Weight </th>
+                <th> Packaging </th>
+                <th> Paper </th>
+                <th> Total </th>
+              </tr>
+              <tr>
+                <td><textarea rows="1" class="form-control" id="title" name="item[title]" placeholder="Title"></textarea></td>
+                <td><textarea rows="1" class="form-control" id="author" name="item[author]" placeholder="Author"></textarea></td>
+                <td><input type="text" class="form-control" id="isbn" name="item[isbn]" placeholder="ISBN"></td>
+                <td><input type="text" class="form-control" id="condition" name="item[condition]" placeholder="Condition"></td>
+                <td><textarea rows="1" class="form-control" id="specifics" name="item[specifics]" placeholder="Specifics"></textarea></td>
+                <td><input type="text" class="form-control" id="edition" name="item[edition]" placeholder="Edition"></td>
+                <td><input type="text" class="form-control" id="year" name="item[year]" placeholder="Year"></td>
+                <td><input list="book-cover" class="form-control" id="cover" name="item[cover]"></td>
+                  <datalist id="book-cover">
+                    <option value="Hardcover">
+                    <option value="Paperback">
+                  </datalist>
+                <td><input type="number" step="any" class="form-control" id="weight" name="item[weight]" placeholder="Weight" value="0"></td>
+                <td><input type="number" step="any" class="form-control" id="envelope" name="item[env]" placeholder="Envelope" value="0"></td>
+                <td><input type="number" step="any" class="form-control" id="paper" name="item[paper]" placeholder="Paper" value="0"></td>
+                <td><input type="number" step="any" class="form-control" id="total" name="item[total]" placeholder="Total" readonly="true"></td>
+              </tr>
+              <% @items.each do |item| %>
+                <tr>
+                  <td> <a href="/items/<%= item.id %>"><%= item.title %></a> </td>
+                  <td> <%= item.author %> </td>
+                  <td> <%= item.isbn %> </td>
+                  <td> <%= item.condition %> </td>
+                  <td> <%= item.specifics %> </td>
+                  <td> <%= item.edition %> </td>
+                  <td> <%= item.year %> </td>
+                  <td> <%= item.cover %> </td>
+                  <td class="right"> <%= '%.2f' % item.weight %> </td>
+                  <td class="right"> <%= '%.2f' % item.env %> </td>
+                  <td class="right"> <%= '%.2f' % item.paper %> </td>
+                  <td class="right"> <%= '%.2f' % item.total %> </td>
+                </tr>
+              <% end %>
+            </table>
+          </div><!-- End .Panel-body -->
+        </div><!-- End .Panel -->
+      </form>
+
+      </div><!-- End .Col -->
+    </div><!-- End .Row -->
+
+
+
+
+
+
+</div><!-- End .Container-Fluid -->

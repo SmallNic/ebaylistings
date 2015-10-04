@@ -1,0 +1,55 @@
+body {
+  padding: 0 25px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+th {
+  text-align: center;
+}
+
+td {
+  padding: 10px;
+}
+
+.panel {
+  margin-top: 50px;
+}
+
+.panel-heading {
+  background: #f2f2f2;
+}
+
+table {
+  background: white;
+}
+
+.centered{
+  float: none;
+  margin: 0 auto;
+}
+
+.right {
+  text-align:right;
+}
+
+.new-book-button {
+  margin-top:-40px;
+}
+
+.edit-book-button {
+  margin-top:-60px;
+}
+
+#delete-button{
+  display:inline-block;
+}
+
+#item-details {
+  width:100%;
+  height:850px;
+  max-width:100%;
+}
+
+#edit-table{
+  width:90%;
+}

@@ -1,9 +1,12 @@
 require 'pg'
 require 'active_record'
 
+# local db name
+# :database => "ebaylistings"
+
 ActiveRecord::Base.establish_connection(
   :adapter => "postgresql",
-  :database => "ebaylistings"
+  :database => "d7locl69rpc2hv"
 )
 
 if defined?(Sinatra)
